@@ -16,3 +16,9 @@
 提取码：3ra7
 
 链接：https://rec.ustc.edu.cn/share/b1248bc0-cc04-11ef-8950-495341a55c2d
+
+25.2.13更新：
+已成功进入系统，采用linux-6.0，D1s版本进行修改，之前的有问题是因为linux主线没有提供对clock-controller的支持，导致作为consumer的8250_dw驱动无法probe。
+调试中出现的问题有，找不到挂载系统（error -2）是因为bootargs中应该使用rdinit而不是init；
+内核没有打印是因为设备树中chosen对串口表示的不准确，以现行的dts为准。
+有帮助的网址：https://whycan.com/t_9293.html
